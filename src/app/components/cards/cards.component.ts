@@ -16,6 +16,12 @@ export class CardsComponent implements OnInit {
     this.cardStorage.getAll()
   }
 
+  //Tämä toimii, muista lisät että poistaa myös back endistä
+  deleteCard(data){
+    let newCardList = this.cardStorage.currentData.filter((value) => value.id != data.id)
+    this.cardStorage.setData(newCardList)
+  }
+
   
 
 }

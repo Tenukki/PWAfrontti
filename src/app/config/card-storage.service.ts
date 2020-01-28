@@ -13,15 +13,20 @@ export class CardStorageService {
   constructor(private cardServiceService: CardServiceService) { }
 
 
-  getAll() {
+  getAll(): any {
     this.cardServiceService.getAll().subscribe(data =>{
       console.log(data)
       this.currentData = data
     })
+    
   }
 
   getData(){
     return this.currentData;
+  }
+
+  setData(data){
+    this.currentData = data
   }
 
 }

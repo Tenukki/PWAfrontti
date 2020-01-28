@@ -1,4 +1,9 @@
-<div *ngFor="let data of this.cardStorage.currentData">
-    <h1>{{data.title}}</h1>
-    <p>{{data.text}}</p>
+<div  class="row itemsBlock">
+    <div class="card col-md-4 col-sm-6 col-12" style="width: 18rem;" *ngFor="let data of this.cardStorage.currentData.reverse()">
+        <div class="card-body">
+        <h1 class="card-title">{{data.title}}</h1>
+        <p class="card-text" >{{data.text}}</p>
+        <button class="btn btn-danger" (click)="deleteCard(data)">X</button>
+        </div>
+    </div>
 </div>
