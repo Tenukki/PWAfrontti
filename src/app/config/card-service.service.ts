@@ -18,4 +18,12 @@ export class CardServiceService {
   public newCard(body) {
     return this.http.post(this.configUrl,body);
   }
+
+  public deleteCard(id){
+    return this.http.delete(this.configUrl+"/"+id)
+  }
+
+  public updateCard(id,jsonBody){
+    return this.http.put(this.configUrl+"/"+id,jsonBody)
+  }
 }

@@ -29,4 +29,5 @@ export class CardStorageService {
     this.currentData = data
   }
 
+
 }

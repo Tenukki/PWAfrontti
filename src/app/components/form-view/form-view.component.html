@@ -1,12 +1,18 @@
 <div class="container">
-    <p>Write title:</p>
-    <input type="text" [(ngModel)]="title">
-    
-    <p>Instructions for the code:</p>
-    <textarea [(ngModel)]="text"></textarea>
-    <br>
-    <button (click)="postCard()">Send the data!</button>
+    <div class="center text-center">
+        <h1>Add new Card</h1>
+        <div class="space">
+            <label for="exampleInputEmail1">Write title:</label>
+            <input class="form-control form-control-lg" type="text" [(ngModel)]="title">
+        </div>
+        <div class="space">
+        <label for="exampleInputEmail1">Instructions for the code:</label>
+        <textarea class="form-control form-control-lg" [(ngModel)]="text"></textarea>
+        </div>
+        <button class="btn btn-success" (click)="postCard()">Send</button>
+    </div>
 </div>
+
 
 
 
