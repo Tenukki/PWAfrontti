@@ -1,11 +1,13 @@
-<div class="container">
-    <div class="pad">
+<div >
+    <div class="pad shadowBackround">
+        <span>New title</span>
         <input class="form-control form-control-lg pad2" [(ngModel)]="newTitle">
         
+        <span>New text</span>
         <textarea  class="form-control form-control-lg pad2" [(ngModel)]="newText"></textarea>
         
-        <div class="vertical-center">
-            <button class="btn btn-success " (click)="updateCard(jsonData.id)">Send</button>
+        <div class="pad2">
+            <button class="btn btn-dark pad2 center " (click)="updateCard(jsonData.id)">Send</button>
         </div>
         
     </div>
