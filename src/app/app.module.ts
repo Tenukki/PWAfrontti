@@ -10,6 +10,7 @@ import { CardsComponent } from './components/cards/cards.component';
 import { ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from '@angular/common/http';
 import { EditFormComponent } from './components/edit-form/edit-form.component';
+import { MapComponent } from './components/map/map.component';
 
 
 
@@ -19,6 +20,7 @@ import { EditFormComponent } from './components/edit-form/edit-form.component';
     FormViewComponent,
     CardsComponent,
     EditFormComponent,
+    MapComponent,
     
   ],
   imports: [
