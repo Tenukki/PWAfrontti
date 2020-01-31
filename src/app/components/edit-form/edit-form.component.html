@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="pad">
+        <input class="form-control form-control-lg pad2" [(ngModel)]="newTitle">
+        
+        <textarea  class="form-control form-control-lg pad2" [(ngModel)]="newText"></textarea>
+        
+        <div class="vertical-center">
+            <button class="btn btn-success " (click)="updateCard(jsonData.id)">Send</button>
+        </div>
+        
+    </div>
+</div>

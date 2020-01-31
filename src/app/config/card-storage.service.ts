@@ -17,6 +17,7 @@ export class CardStorageService {
     this.cardServiceService.getAll().subscribe(data =>{
       console.log(data)
       this.currentData = data
+      this.currentData.reverse()
     })
     
   }
@@ -28,5 +29,6 @@ export class CardStorageService {
   setData(data){
     this.currentData = data
   }
+
 
 }
