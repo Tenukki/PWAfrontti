@@ -1,8 +1,26 @@
 
 <div *ngIf="logState; else out" class="enter text-center pad">
+<h4>How to use the app?</h4>
+<p>The point of this app was to familiarize my self to Angular. This app can be used as a notebook for code notes. Please
+login first to use the Cards and Form buttons. This is also an pwa app so you can install it on you device (use Iphone haven't been tested on android)
+</p>
+<table>
+    <tr>
+        <th>username</th>
+        <th>password</th>
+    </tr>
+    <tr>
+        <td>santeri</td>
+        <td>santeri</td>
+    </tr>
+    <tr>
+        <td>santeri2</td>
+        <td>santeri2</td>
+    </tr>
+</table>
 
-
-username: <input class="form-control form-control-lg" type=text [(ngModel)]="username">
+<label>username:</label>
+ <input class="form-control form-control-lg" type=text [(ngModel)]="username">
 <br>
 password: <input class="form-control form-control-lg" type="password" [(ngModel)]="password">
 <br>
