@@ -1,4 +1,7 @@
 <div class="container">
+
+    
+
     <div class="center text-center">
         <h1>Add new Card</h1>
         <div class="space">
@@ -9,8 +12,18 @@
         <label for="exampleInputEmail1">Instructions for the code:</label>
         <textarea class="form-control form-control-lg" [(ngModel)]="text"></textarea>
         </div>
-        <button class="btn btn-success space" (click)="postCard()">Send</button>
+
+        <button *ngIf="loader; else spinner" class="btn btn-success space" (click)="postCard()">Send</button>
+
+        <ng-template #spinner>
+            <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </ng-template>
+        
+
     </div>
+    
 </div>
 
 

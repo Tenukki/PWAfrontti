@@ -6,9 +6,15 @@
         <span>New text</span>
         <textarea  class="form-control form-control-lg pad2" [(ngModel)]="newText"></textarea>
         
-        <div class="pad2">
-            <button class="btn btn-dark pad2 center " (click)="updateCard(jsonData.id)">Send</button>
+        <div *ngIf="loader; else spinner" class="pad2">
+            <button class="btn btn-dark pad2 center " (click)="updateCard(jsonData.id)">Save</button>
         </div>
+
+        <ng-template #spinner>
+            <div class="center pad2 spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </ng-template>
         
     </div>
 </div>

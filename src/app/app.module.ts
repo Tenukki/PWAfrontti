@@ -10,6 +10,8 @@ import { CardsComponent } from './components/cards/cards.component';
 import { ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from '@angular/common/http';
 import { EditFormComponent } from './components/edit-form/edit-form.component';
+import { LoginComponent } from './components/login/login.component';
+import { RouterGuardGuard } from './security/router-guard.guard';
 //import { MapComponent } from './components/map/map.component';
 
 
@@ -20,7 +22,7 @@ import { EditFormComponent } from './components/edit-form/edit-form.component';
     FormViewComponent,
     CardsComponent,
     EditFormComponent,
-    //MapComponent,
+    LoginComponent,
     
   ],
   imports: [
@@ -31,7 +33,7 @@ import { EditFormComponent } from './components/edit-form/edit-form.component';
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     HttpClientModule
   ],
-  providers: [],
+  providers: [RouterGuardGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

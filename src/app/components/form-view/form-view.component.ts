@@ -11,13 +11,17 @@ import { CardStorageService } from 'src/app/config/card-storage.service';
 export class FormViewComponent implements OnInit {
   title:string
   text:string
-
+  loader:boolean = true
+  loader2: boolean 
   constructor(private cardService: CardServiceService, private cardStorage: CardStorageService) { }
 
-  postCard (){
+  postCard(){
+    this.loader= false
     this.cardService.newCard({title: this.title, text: this.text}).subscribe(data =>{
-      this.cardStorage.getAll()
+    let bol = this.cardStorage.getAll()
+    this.loader = bol
     })
+
     
   }
 

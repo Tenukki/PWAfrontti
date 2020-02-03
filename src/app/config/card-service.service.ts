@@ -10,6 +10,7 @@ export class CardServiceService {
   constructor(private http: HttpClient) { }
 
   configUrl = 'https://pwa22.herokuapp.com/api/infos';
+  configUrlLogin = 'https://pwa22.herokuapp.com/api/login';
 
   public getAll() {
     return this.http.get(this.configUrl);
@@ -26,4 +27,9 @@ export class CardServiceService {
   public updateCard(id,jsonBody){
     return this.http.put(this.configUrl+"/"+id,jsonBody)
   }
+
+  public login(body) {
+    return this.http.post(this.configUrlLogin,body);
+  }
+
 }

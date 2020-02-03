@@ -14,6 +14,7 @@ export class EditFormComponent implements OnInit {
 
   newTitle
   newText
+  loader:boolean = true
 
   constructor(public cardService: CardServiceService, public cardStorage: CardStorageService) { }
 
@@ -24,9 +25,11 @@ export class EditFormComponent implements OnInit {
   }
 
   updateCard(id){
+    this.loader = false
     this.cardService.updateCard(id,{title: this.newTitle, text: this.newText}).subscribe((data) =>{
       console.log(data)
-      this.cardStorage.getAll()
+      let bol = this.cardStorage.getAll()
+      this.loader = bol
     })
     
     

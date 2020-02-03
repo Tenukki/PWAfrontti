@@ -1,0 +1,17 @@
+
+<div *ngIf="logState; else out" class="enter text-center pad">
+
+
+username: <input class="form-control form-control-lg" type=text [(ngModel)]="username">
+<br>
+password: <input class="form-control form-control-lg" type="password" [(ngModel)]="password">
+<br>
+<button   class="btn btn-success space" (click)="login()">login</button>
+</div>
+
+<ng-template #out>
+    <div class="enter text-center pad">
+    <button   class=" btn btn-danger space" (click)="logOut()">log out</button>
+    <p>{{this.cardStorage.userData.username}}</p>
+</div>
+</ng-template>
