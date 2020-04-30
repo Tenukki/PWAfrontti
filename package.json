@@ -24,7 +24,7 @@
     "@types/mapbox-gl": "^1.6.3",
     "bootstrap": "^4.4.1",
     "http-server": "^0.12.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "mapbox-gl": "^1.7.0",
     "node-waves": "^0.7.6",
     "rxjs": "~6.4.0",
